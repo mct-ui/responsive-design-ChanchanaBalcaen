@@ -1,7 +1,26 @@
 /*------------------------------------*\
   #FONTS
 \*------------------------------------*/
+@font-face {
+    font-family: "HK Grotesk Web";
+    font-weight: 200;
+    src: url("../fonts/hkgrotesk-light-webfont.woff2") format("woff2"),
+         url("../fonts/hkgrotesk-light-webfont.woff") format("woff");
+}
 
+@font-face {
+    font-family: "HK Grotesk Web";
+    font-weight: 400;
+    src: url("../fonts/hkgrotesk-regular-webfont.woff2") format("woff2"),
+         url("../fonts/hkgrotesk-regular-webfont.woff") format("woff");
+}
+
+@font-face {
+    font-family: "HK Grotesk Web";
+    font-weight: 600;
+    src: url("../fonts/hkgrotesk-medium-webfont.woff2") format("woff2"),
+         url("../fonts/hkgrotesk-medium-webfont.woff") format("woff");
+}
 /*------------------------------------*\
   #GENERIC
 \*------------------------------------*/
@@ -15,11 +34,21 @@
 html {
     font-size: 16px;
     line-height: 1.5;
-    font-family: Helvetica, arial, sans-serif;
-    color: #111;
+    font-family: "HK Grotesk Web",Helvetica, arial, sans-serif;
+    color: #202024;
     box-sizing: border-box;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 20px;
+        line-height: 1.6;
+    }
+    h1, h2, h3 {
+        font-weight: 200;
+    }
 }
 
 *,
@@ -36,7 +65,7 @@ html {
  */
 
 ::selection {
-    background: #e85e00;
+    background: #5051DB;
     color: white;
     text-shadow: none;
 }
@@ -125,7 +154,7 @@ figcaption {
     font-size: 12px;
     line-height: 16px;
     margin-top: 8px;
-    color: #3C3C42;
+    color: #3E3EA8;
 }
 
 hr {
@@ -195,7 +224,7 @@ a:focus {
     margin-left: auto;
     margin-right: auto;
     width: 100%;
-    max-width: 90em; /* 90 * 16px = 1440px */
+    max-width: 56.4em; /* 1128/20 px*/
 }
 
 /*
@@ -564,6 +593,7 @@ a:focus {
     USE THEM INLINE!
 */
 
+
 /* Extra small devices (portrait phones, less than 576px)
    No media query since this is the default in mobile first design
 */
@@ -596,7 +626,7 @@ a:focus {
     *:before,
     *:after {
         background: transparent !important;
-        color: #000 !important;
+        color: #3E3EA8 !important;
         /* Black prints faster:
                                    http://www.sanbeiji.com/archives/953 */
         box-shadow: none !important;
@@ -625,7 +655,7 @@ a:focus {
     }
     pre,
     blockquote {
-        border: 1px solid #999;
+        border: 1px solid #3E3EA8;
         page-break-inside: avoid;
     }
     /*
